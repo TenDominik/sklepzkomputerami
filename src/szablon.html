@@ -1,0 +1,76 @@
+<div class="formularz">
+        <h1>Zamówienie</h1>
+        <div id="label">
+            <section class="all">
+                <form #formularz="ngForm">
+                    <p>Imie:</p><input type="text" class="input" name="imie" id="imie" [(ngModel)]="imie" required #imieForm="ngModel">
+                    <div *ngIf="imieForm.invalid && imieForm.touched; else elseBlockimie">{{wypierdolblad()}}</div>
+                    <ng-template #elseBlockimie>{{gitimie()}}</ng-template>
+                    <p>Nazwisko:</p><input type="text" class="input" name="nazwisko" id="nazwisko" [(ngModel)]="nazwisko" required #nazwiskoForm="ngModel">
+                    <div *ngIf="nazwiskoForm.invalid && nazwiskoForm.touched ; else elseBlocknazwisko">{{wypierdolbladnazwisko()}}</div>
+                    <ng-template #elseBlocknazwisko>{{gitnazwisko()}}</ng-template>
+                    <p>Email:</p><input type="email" name="email" id="email" class="input" [(ngModel)]="email" required pattern=".+@.+" #emailForm="ngModel">
+                    <div *ngIf="emailForm.invalid &&emailForm.touched && emailForm.errors?.['pattern']; else elseBlockemail">{{wypierdolblademail()}}</div>
+                    <ng-template #elseBlockemail>{{gitemail()}}</ng-template>
+                    <p>Telefon:</p><input type="number" name="telefon" id="telefon" class="input" [(ngModel)]="telefon" required #telefonForm="ngModel">
+                    <div *ngIf="telefonForm.invalid && telefonForm.touched; else elseBlocknumer">{{wypierdolbladtelefon()}}</div>
+                    <ng-template #elseBlocknumer>{{gitnumer()}}</ng-template>
+                    <section>
+                        <h2 class="h22">Karta graficzna</h2><select name="numerkarty" [(ngModel)]="numerkarty" (change)="sprawdz()">
+                            <option value="0">GTX 1650</option>
+                            <option value="1">GTX 1060</option>
+                            <option value="2">GTX 2060</option>
+                        </select><br>
+                        <img src="assets/zdjecia/1650.jpg" id="cwel1" class="foteczka" style="border:  1px solid black; width: 20%; height: auto;">
+                        <p id="tekst1">Cena: 1029,00zł | 4 GB 8002 MHz GDDR5</p><br>
+                    </section>
+                    <section>
+                        <h2 class="h22">Procesor</h2><select name="numerprocka" [(ngModel)]="numerprocka" (change)="sprawdz()">
+                            <option value="3">AMD Ryzen 9 7950X</option>
+                            <option value="4">AMD Ryzen 7 5700X</option>
+                            <option value="5">Intel Core i5-13600K</option>
+                        </select><br>
+                        <img src="assets/zdjecia/ryzer9.jpg" id="cwel2" class="foteczka" style="border:  1px solid black; width: 20%; height: auto;">
+                        <p id="tekst2">Cena: 2379,00zł | 16/32 rdzeni do 5,7 GHz</p><br>
+                    </section>
+                    <section>
+                        <h2 class="h22">Monitor</h2><select name="numermonitora" [(ngModel)]="numermonitora" (change)="sprawdz()">
+                            <option value="6">Acer Nitro</option>
+                            <option value="7">LG  2560</option>
+                            <option value="8">Acer</option>
+                        </select><br>
+                        <img src="assets/zdjecia/acernitro.jpg" id="cwel3" class="foteczka" style="border:  1px solid black; width: 20%; height: auto;">
+                        <p id="tekst3">Cena: 599,00zł | 1920 x 1080 (FullHD) 16:9 75 Hz 23,8"</p><br>
+                    </section>
+                    <section>
+                        <h2 class="h22">RAM</h2><select name="numerramu" [(ngModel)]="numerramu" (change)="sprawdz()">
+                            <option value="9">Kingston FURY</option>
+                            <option value="10">GOODRAM</option>
+                            <option value="11">ADATA</option>
+                        </select><br>
+                        <img src="assets/zdjecia/kingstone.jpg" id="cwel4" class="foteczka" style="border:  1px solid black; width: 20%; height: auto;">
+                        <p id="tekst4">Cena: 209,00 zł | 16GB (2x8GB) 3200MHz DDR4</p><br>
+                    </section>
+                    <section>
+                        <h2 class="h22">Klawiatury</h2><select name="numerklaw" [(ngModel)]="numerklaw" (change)="sprawdz()">
+                            <option value="12">SteelSeries Apex 3</option>
+                            <option value="13">Razer Ornata V2</option>
+                            <option value="14">Roccat VULCAN 121</option>
+                        </select><br>
+                        <img src="assets/zdjecia/steelseries.jpg" id="cwel5" class="foteczka" style="border:  1px solid black; width: 20%; height: auto;">
+                        <p id="tekst5">Cena: 349,00 zł | Membranowe Przewodowa</p><br>
+                    </section><br><br><br>
+                    <div style="border-top: 5px solid #b0b0b0; border-bottom: 5px solid #b0b0b0; padding: 1%;">
+                        <p id="karta">Karta graficzna: GeForce GTX 1650- 1029,00zł</p><br>
+                        <p id="procesor">Procesor: AMD Ryzen 9 7950X - 2999,00zł</p><br>
+                        <p id="monitor">Monitor: Acer Nitro  1920 x 1080 - 599,00zł </p><br>
+                        <p id="ram">Ram: Kingston FURY 16GB - 209,00 zł</p><br>
+                        <p id="klawiatura">Klawiatura: SteelSeries Apex 3 -  349,00 zł</p><br>
+                        <p id="razem">Razem za zestaw: 4565zł</p>
+                    </div><br><br><br>
+                    <button (click)="niger()" class="przycisk" [disabled]="!formularz.form.valid">Złóż zamówienie</button>
+                    <!-- <button (click)="sprawdz()" class="przycisk" (click)="formularz.resetForm()">Reset</button> -->
+                </form>
+            </section>
+        </div>
+</div>

@@ -1,0 +1,25 @@
+Procesory: 
+Ryzen 9 Procesor AMD Ryzen 9 7950X, 16 rdzeni/32 do 5,7 GHz 2379,00zł
+Ryzen 7: Ryzen™ 7 5700X 3.4 GHz (4.6 GHz w trybie turbo) Liczba rdzeni fizycznych 8 rdzeni Liczba wątków 16 wątków 899,00 zł
+Intel i5: i5-13600K 3.5 GHz (5.1 GHz w trybie turbo) 14 rdzeni 1 639,00 zł
+
+Karty graficzne:
+
+GTX 1650: GeForce GTX 1650 4 GB 8002 MHz GDDR5 1029,00zł
+GTX 1060: GeForce GTX 1060 6 GB 8100 MHz GDDR5 520,00zł
+RTX 2060: GeForce RTX 2060 6 GB 14000 MHz GDDR6 1339,00zł
+
+Monitory: 
+Acer Nitro  1920 x 1080 (FullHD) 16:9 75 Hz 23,8" 599,00 zł
+LG  2560 x 1440 (WQHD) 16:9 165 Hz 27" 1 749,00 zł
+Acer NN 1920 x 1080 (FullHD) 16:9 75 Hz 23,8" 469,00 zł
+
+Ramy: 
+Kingston FURY 16GB (2x8GB) 3200MHz DDR4 209,00 zł
+GOODRAM 16GB (2x8GB) 3200MHz DDR4 205,00 zł
+ADATA 32GB (2x16GB) 3200MHz DDR4 359,00 zł
+
+Klwaiatury:
+SteelSeries Apex 3 Membranowe Przewodowa 349,00 zł
+Razer Ornata V2 Mechaniczno-membranowe Przewodowa 265,00 zł
+Roccat VULCAN 121 Mechaniczne Przewodowa 289,00 zł
